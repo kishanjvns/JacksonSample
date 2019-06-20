@@ -40,8 +40,12 @@ public class App
     	ObjectMapper mapper = new ObjectMapper();
         mapper.registerModule(validationModule);
         
-        String a="{'name':null,'age':10,address:null}";
+        String a="{'name':null,'age':10}";
     	JSONObject jsonObject=new JSONObject(a);
+    	JSONObject addressJson=new JSONObject();
+    	addressJson.put("addressLine2", "vns");
+    	//addressJson.put("contactNo", "1234");
+    	jsonObject.put("address", addressJson);
     	System.out.println(mapper.readValue(jsonObject.toString(), Person.class));
     	        
     }

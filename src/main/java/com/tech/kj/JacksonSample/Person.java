@@ -2,14 +2,12 @@ package com.tech.kj.JacksonSample;
 
 import javax.validation.constraints.NotNull;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 public class Person {
 	String name;
 	int age;	
 	EmployeeType employeeType;
-    Address address;
+    @NotNull
+	Address address;
     
 	public Address getAddress() {
 		return address;
