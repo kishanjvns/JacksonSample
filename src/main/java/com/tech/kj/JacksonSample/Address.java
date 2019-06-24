@@ -1,11 +1,14 @@
 package com.tech.kj.JacksonSample;
 
 import javax.validation.constraints.NotNull;
+
+import com.tech.kj.JacksonSample.validator.CheckLength;
 public class Address {
 	private String addressLine1;
-	@NotNull
+	@NotNull	
 	private String addressLine2;
 	@NotNull
+	@CheckLength(value="${field.length}")
 	private String contactNo;
 	public String getAddressLine1() {
 		return addressLine1;

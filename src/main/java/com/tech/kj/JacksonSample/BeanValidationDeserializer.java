@@ -9,6 +9,9 @@ import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 
+import org.hibernate.validator.cfg.ConstraintMapping;
+import org.hibernate.validator.spi.cfg.ConstraintMappingContributor.ConstraintMappingBuilder;
+
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.deser.BeanDeserializer;

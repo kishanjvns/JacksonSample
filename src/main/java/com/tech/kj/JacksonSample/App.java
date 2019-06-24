@@ -2,6 +2,7 @@ package com.tech.kj.JacksonSample;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Locale;
 
 import org.json.JSONObject;
 
@@ -36,6 +37,7 @@ public class App
             }
         });
     	
+    	Locale.setDefault(Locale.FRENCH);
     	
     	ObjectMapper mapper = new ObjectMapper();
         mapper.registerModule(validationModule);
@@ -44,7 +46,7 @@ public class App
     	JSONObject jsonObject=new JSONObject(a);
     	JSONObject addressJson=new JSONObject();
     	addressJson.put("addressLine2", "vns");
-    	//addressJson.put("contactNo", "1234");
+    	addressJson.put("contactNo", "123455");
     	jsonObject.put("address", addressJson);
     	System.out.println(mapper.readValue(jsonObject.toString(), Person.class));
     	        
